@@ -263,7 +263,7 @@ An interactive Streamlit application was developed to make the trained model acc
 
 <br>
 
-**Live Application:** Add your Streamlit deployment URL here after deployment.
+**Live Application:** [APP LINK](https://credit-card-fraud-detection-eq8bakvvwk4z5fxwjlp5sm.streamlit.app/)
 
 ---
 
