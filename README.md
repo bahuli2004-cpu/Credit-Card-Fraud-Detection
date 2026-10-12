@@ -98,7 +98,7 @@ The dataset is highly imbalanced, with legitimate transactions significantly out
 ### 2. Transaction Amount Distribution by Class
 
 <p align="center">
-  <img src="screenshots/Transaction_rate.png" width="60%">
+  <img src="screenshots/Transaction_Rate.png" width="60%">
 </p>
 
 <br><br>
@@ -121,37 +121,25 @@ Transaction activity varies across elapsed-time intervals, suggesting potential 
 
 ## Feature Engineering
 
-Feature engineering was performed to prepare the original transaction data for model training and prediction.
+Feature engineering was performed to prepare the transaction data for model training and prediction.
 
 The final model uses the following features:
 
-- `V1`–`V28`: anonymised numerical transaction features.
-- `log_amount`: logarithmic transformation of transaction amount.
-- `hour_sin` and `hour_cos`: cyclical features derived from elapsed transaction time.
+- **V1–V28:** Anonymised numerical transaction features.
+- **log_amount:** Logarithmic transformation of the transaction amount, calculated as `log(1 + Amount)`.
+- **hour_sin and hour_cos:** Cyclical features derived from transaction elapsed time.
 
-The amount transformation is calculated as:
+The time-based features are calculated as follows:
 
-$$
-\text{log\_amount} = \log(1+\text{Amount})
-$$
+- `hour = floor(Time / 3600) % 24`
+- `hour_sin = sin(2 * pi * hour / 24)`
+- `hour_cos = cos(2 * pi * hour / 24)`
 
-The elapsed-time feature is transformed into a cyclical representation to capture its periodic structure:
+These transformations represent the time feature cyclically, allowing values near the beginning and end of the 24-hour cycle to be represented as close to each other.
 
-$$
-\text{hour} = \left\lfloor \frac{\text{Time}}{3600} \right\rfloor \bmod 24
-$$
+The dataset was split chronologically into training, validation, and test sets to reduce the risk of temporal data leakage.
 
-$$
-\text{hour\_sin} = \sin\left(\frac{2\pi \cdot \text{hour}}{24}\right)
-$$
-
-$$
-\text{hour\_cos} = \cos\left(\frac{2\pi \cdot \text{hour}}{24}\right)
-$$
-
-These time features are proxies derived from elapsed time; they do not represent verified real-world transaction clock times.
-
-The dataset was split chronologically into training, validation, and test sets to better reflect the task of predicting future transactions from historical data.
+**Note:** The time-derived features are based on elapsed time in the dataset and do not represent verified real-world clock time.
 
 ---
 
