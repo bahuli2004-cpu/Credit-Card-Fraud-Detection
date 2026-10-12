@@ -1,0 +1,8 @@
+Metric,Value
+Total transactions,284807.0
+Total columns,33.0
+Fraud cases,492.0
+Legitimate cases,284315.0
+Fraud percentage,0.1727
+Missing values,0.0
+Duplicate rows,1081.0
