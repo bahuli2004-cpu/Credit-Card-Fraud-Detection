@@ -88,7 +88,7 @@ The analysis includes:
 ### 1. Class Distribution
 
 <p align="center">
-  <img src="screenshots/class_distribution.png" width="50%">
+  <img src="screenshots/Class_Distribution.png" width="50%">
 </p>
 
 <br><br>
@@ -224,7 +224,7 @@ XGBoost was selected as the final model for the fraud detection application. The
 ### 2. Score Distribution
 
 <p align="center">
-  <img src="screenshots/score.png" width="40%">
+  <img src="screenshots/Score.png" width="40%">
 </p>
 
 <br><br>
@@ -313,65 +313,6 @@ Fault detection/
 ```
 
 The structure above is illustrative. Update the notebook names and folders to match your actual repository. The raw dataset is excluded from Git.
-
----
-
-## Installation and Usage
-
-### Prerequisites
-
-- Python installed on your system.
-- Git installed on your system.
-- The project repository cloned to your local machine.
-
-### 1. Clone the Repository
-
-Replace `YOUR_USERNAME` with your GitHub username.
-
-```bash
-git clone https://github.com/YOUR_USERNAME/credit-card-fraud-detection.git
-cd credit-card-fraud-detection
-```
-
-### 2. Create a Virtual Environment
-
-On Windows:
-
-```bash
-python -m venv .venv
-```
-
-Activate it using PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Install Dependencies
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-### 4. Run the Streamlit Application
-
-```bash
-python -m streamlit run app.py
-```
-
-Open the local URL displayed in the terminal, usually `http://localhost:8501`.
-
-### 5. Upload Transaction Data
-
-Upload a CSV file containing these columns:
-
-- `Time`
-- `Amount`
-- `V1` through `V28`
-
-The application generates the engineered features, predicts fraud-risk scores, and flags transactions based on the selected threshold.
-
-If the CSV contains a `Class` column, it may also be used for optional evaluation. Use labelled, held-out data for meaningful performance assessment.
 
 ---
 
