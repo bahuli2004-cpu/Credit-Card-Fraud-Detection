@@ -220,7 +220,7 @@ XGBoost was selected as the final model for the fraud detection application. The
 ### 3. Test Results
 
 <p align="center">
-  <img src="screenshots/Result.png" width="40%">
+  <img src="screenshots/Result.png" width="50%">
 </p>
 
 <br><br>
