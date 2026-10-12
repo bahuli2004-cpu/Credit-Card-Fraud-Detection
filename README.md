@@ -131,23 +131,23 @@ The final model uses the following features:
 
 The amount transformation is calculated as:
 
-\[
+$$
 \text{log\_amount} = \log(1+\text{Amount})
-\]
+$$
 
 The elapsed-time feature is transformed into a cyclical representation to capture its periodic structure:
 
-\[
+$$
 \text{hour} = \left\lfloor \frac{\text{Time}}{3600} \right\rfloor \bmod 24
-\]
+$$
 
-\[
-\text{hour\_sin} = \sin\left(\frac{2\pi\cdot\text{hour}}{24}\right)
-\]
+$$
+\text{hour\_sin} = \sin\left(\frac{2\pi \cdot \text{hour}}{24}\right)
+$$
 
-\[
-\text{hour\_cos} = \cos\left(\frac{2\pi\cdot\text{hour}}{24}\right)
-\]
+$$
+\text{hour\_cos} = \cos\left(\frac{2\pi \cdot \text{hour}}{24}\right)
+$$
 
 These time features are proxies derived from elapsed time; they do not represent verified real-world transaction clock times.
 
