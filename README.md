@@ -257,13 +257,11 @@ An interactive Streamlit application was developed to make the trained model acc
 
 ### Application Screenshots
 
-**IMAGE: STREAMLIT APPLICATION HOMEPAGE**
+<p align="center">
+  <img src="screenshots/App.png" width="50%">
+</p>
 
-**IMAGE: CSV UPLOAD INTERFACE**
-
-**IMAGE: FRAUD SCORE AND REVIEW FLAG OUTPUT**
-
-**IMAGE: STREAMLIT RESULTS AND EVALUATION METRICS**
+<br>
 
 **Live Application:** Add your Streamlit deployment URL here after deployment.
 
